@@ -1,3 +1,0 @@
-Hi <br />
-
-From laravel
