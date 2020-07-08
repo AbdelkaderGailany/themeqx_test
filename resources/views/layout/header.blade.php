@@ -150,11 +150,7 @@
                 <?php
                 $header_menu_pages = Post::whereStatus('1')->where('show_in_header_menu', 1)->get();
                 ?>
-                @if($header_menu_pages->count() > 0)
-                    @foreach($header_menu_pages as $page)
-                        <li><a href="{{ route('single_page', $page->slug) }}">{{ $page->title }} </a></li>
-                    @endforeach
-                @endif
+                
 
                 @if( ! Auth::check())
                     <li><a href="{{ route('login') }}"> <i class="fa fa-lock"></i>  {{ trans('app.login') }}  </a>  </li>
