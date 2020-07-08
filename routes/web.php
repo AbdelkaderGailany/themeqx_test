@@ -87,7 +87,7 @@ Route::group(['prefix'=>'dashboard', 'middleware' => 'dashboard'], function(){
         Route::post('change-user-status', ['as'=>'change_user_status', 'uses' => 'UserController@changeStatus']);
         Route::post('change-user-feature', ['as'=>'change_user_feature', 'uses' => 'UserController@changeFeature']);
         Route::post('delete-reports', ['as'=>'delete_report', 'uses' => 'AdsController@deleteReports']);
-        Route::get('contact-messages', ['as'=>'contact_messages', 'uses' => 'HomeController@contactMessages']);
+        
         Route::group(['prefix'=>'administrators'], function(){
             Route::get('/', ['as'=>'administrators', 'uses' => 'UserController@administrators']);
             Route::get('create', ['as'=>'add_administrator', 'uses' => 'UserController@addAdministrator']);
