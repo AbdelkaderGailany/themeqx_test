@@ -45,13 +45,7 @@ class HomeController extends Controller
 
     
 
-    public function contactMessages(){
-        $title = trans('app.contact_messages');
-        $contact_messages = Contact_query::orderBy('id', 'desc')->paginate(20);
-
-        return view('admin.contact_messages', compact('title', 'contact_messages'));
-    }
-
+   
     /**
      * Switch Language
      */
