@@ -75,7 +75,7 @@
                                     @endforeach
                                 </select>
                             </div>
-
+                            
                             @php $country_usage = get_option('countries_usage'); @endphp
                             @if($country_usage == 'all_countries')
                                 <div class="form-group">
@@ -88,11 +88,6 @@
                                 </div>
                             @endif
 
-                            <div class="form-group">
-                                <select class="form-control select2" id="state_select" name="state">
-                                    <option value=""> @lang('app.select_state') </option>
-                                </select>
-                            </div>
 
                             <button type="submit" class="btn theme-btn"> <i class="fa fa-search"></i> Search Ads</button>
                         </form>
