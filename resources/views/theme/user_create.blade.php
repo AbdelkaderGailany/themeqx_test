@@ -7,24 +7,23 @@
             <div class=" col-md-4 col-sm-4 col-xs-12">
                 <div class="info-box bg-white ">
                     <h4><i class="fa fa-edit"></i> </h4>
-                    <p class="intro"> View, edit and delete your ads. </p>
+                    <p class="intro"> عرض وتعديل وحذف إعلاناتك. </p>
                 </div>
             </div>
 
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="info-box bg-white ">
                     <h4><i class="fa fa-clock-o"></i> </h4>
-                    <p class="intro"> Quick publish new ads with contact details. </p>
+                    <p class="intro"> نشر سريع لإعلانات جديدة مع تفاصيل الاتصال. </p>
                 </div>
             </div>
 
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="info-box bg-white ">
                     <h4><i class="fa fa-bar-chart-o"></i> </h4>
-                    <p class="intro"> Keep track of your favorite ads. </p>
+                    <p class="intro"> تتبع إعلاناتك المفضلة. </p>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -34,7 +33,7 @@
             <div class="col-sm-6 col-sm-offset-3 col-xs-12">
 
                 <div class="login">
-                    <h3 class="authTitle">Sign up or <a href="{{ route('login') }}" class="btn btn-xl btn-default">@lang('app.login')</a></h3>
+                    <h3 class="authTitle">التسجيل  او <a href="{{ route('login') }}" class="btn btn-xl btn-default">@lang('app.login')</a></h3>
 
 
                     @if(session('error'))
@@ -54,28 +53,28 @@
                         <hr />
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <div class="form-group {{ $errors->has('first_name')? 'has-error':'' }} ">
-                                    <input type="text" name="first_name" id="first_name" class="form-control" value="{{ old('first_name') }}" placeholder="First Name" tabindex="1">
-
-                                    {!! $errors->has('first_name')? '<p class="help-block">'.$errors->first('first_name').'</p>':'' !!}
+                                <div class="form-group {{ $errors->has('last_name')? 'has-error':'' }} ">
+                                    <input type="text" name="last_name" id="last_name" class="form-control"  value="{{ old('last_name') }}" placeholder="الأسم الثاني" tabindex="2">
+                                    {!! $errors->has('last_name')? '<p class="help-block">'.$errors->first('last_name').'</p>':'' !!}
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <div class="form-group {{ $errors->has('last_name')? 'has-error':'' }} ">
-                                    <input type="text" name="last_name" id="last_name" class="form-control"  value="{{ old('last_name') }}" placeholder="Last Name" tabindex="2">
-                                    {!! $errors->has('last_name')? '<p class="help-block">'.$errors->first('last_name').'</p>':'' !!}
+                                <div class="form-group {{ $errors->has('first_name')? 'has-error':'' }} ">
+                                    <input type="text" name="first_name" id="first_name" class="form-control" value="{{ old('first_name') }}" placeholder="الأسم الاول" tabindex="1">
+
+                                    {!! $errors->has('first_name')? '<p class="help-block">'.$errors->first('first_name').'</p>':'' !!}
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group {{ $errors->has('email')? 'has-error':'' }} ">
-                            <input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}" placeholder="Email Address" tabindex="4">
+                            <input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}" placeholder="البريد الألكتروني" tabindex="4">
                             {!! $errors->has('email')? '<p class="help-block">'.$errors->first('email').'</p>':'' !!}
 
                         </div>
 
                         <div class="form-group {{ $errors->has('phone')? 'has-error':'' }}">
-                            <input type="text" name="phone" id="phone" class="form-control" value="{{ old('phone') }}" placeholder="Phone Number" tabindex="3">
+                            <input type="text" name="phone" id="phone" class="form-control" value="{{ old('phone') }}" placeholder="رقم الهاتف" tabindex="3">
                             {!! $errors->has('phone')? '<p class="help-block">'.$errors->first('phone').'</p>':'' !!}
                         </div>
 
@@ -84,10 +83,9 @@
                             <div class="col-xs-12">
                                 <div class="form-group {{ $errors->has('gender')? 'has-error':'' }}">
                                     <select id="gender" name="gender" class="form-control select2">
-                                        <option value="">Select Gender</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Fe-Male</option>
-                                        <option value="third_gender">Third Gender</option>
+                                        <option value="">اختر الجنس</option>
+                                        <option value="male">ذكر </option>
+                                        <option value="female">انثى</option>
                                     </select>
                                     {!! $errors->has('gender')? '<p class="help-block">'.$errors->first('gender').'</p>':'' !!}
 
@@ -111,16 +109,16 @@
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <div class="form-group {{ $errors->has('password')? 'has-error':'' }}">
-                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" tabindex="5">
-                                    {!! $errors->has('password')? '<p class="help-block">'.$errors->first('password').'</p>':'' !!}
+                                <div class="form-group {{ $errors->has('password_confirmation')? 'has-error':'' }}">
+                                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="تأكيد كلمة المرور" tabindex="6">
+                                    {!! $errors->has('password_confirmation')? '<p class="help-block">'.$errors->first('password_confirmation').'</p>':'' !!}
 
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <div class="form-group {{ $errors->has('password_confirmation')? 'has-error':'' }}">
-                                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="Confirm Password" tabindex="6">
-                                    {!! $errors->has('password_confirmation')? '<p class="help-block">'.$errors->first('password_confirmation').'</p>':'' !!}
+                                <div class="form-group {{ $errors->has('password')? 'has-error':'' }}">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="كلمة المرور" tabindex="5">
+                                    {!! $errors->has('password')? '<p class="help-block">'.$errors->first('password').'</p>':'' !!}
 
                                 </div>
                             </div>
@@ -142,7 +140,7 @@
 
                         <hr />
                         <div class="row">
-                            <div class="col-xs-12"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+                            <div class="col-xs-12"><input type="submit" value="سجل" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
                         </div>
                     </form>
 

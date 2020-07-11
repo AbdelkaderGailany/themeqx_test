@@ -117,9 +117,7 @@
                                     @if($ad->price_plan == 'premium')
                                         <div class="ribbon-wrapper-green"><div class="ribbon-green">{{ ucfirst($ad->price_plan) }}</div></div>
                                     @endif
-                                    @if($ad->mark_ad_urgent == '1')
-                                        <div class="ribbon-wrapper-red"><div class="ribbon-red">@lang('app.urgent')</div></div>
-                                    @endif
+                                    
                                 </div>
                             </div>
                         @endforeach
@@ -292,7 +290,7 @@
                         loop:false
                     }
                 },
-                navText : ['<i class="fa fa-arrow-circle-o-left"></i>','<i class="fa fa-arrow-circle-o-right"></i>']
+                 navText : ['<i class="fa fa-arrow-circle-o-right"></i>','<i class="fa fa-arrow-circle-o-left"></i>']
             });
         });
 
@@ -316,7 +314,7 @@
                         loop:false
                     }
                 },
-                navText : ['<i class="fa fa-arrow-circle-o-left"></i>','<i class="fa fa-arrow-circle-o-right"></i>']
+                 navText : ['<i class="fa fa-arrow-circle-o-right"></i>','<i class="fa fa-arrow-circle-o-left"></i>']
             });
         });
         $(document).ready(function(){
@@ -339,7 +337,7 @@
                         loop:false
                     }
                 },
-                navText : ['<i class="fa fa-arrow-circle-o-left"></i>','<i class="fa fa-arrow-circle-o-right"></i>']
+                navText : ['<i class="fa fa-arrow-circle-o-right"></i>','<i class="fa fa-arrow-circle-o-left"></i>']
             });
         });
 

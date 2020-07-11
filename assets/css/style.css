@@ -836,7 +836,7 @@ img.thumb-listing-table {
 /** Owl Carousel */
 .themeqx-carousel-ads .owl-controls,.themeqx-carousel-blog-post .owl-controls {
     position: absolute;
-    right: 0;
+    right: 90%;
     top: -60px;
 }
 .themeqx-carousel-ads .owl-controls .owl-prev, .themeqx-carousel-blog-post .owl-controls .owl-prev{
@@ -854,12 +854,12 @@ img.thumb-listing-table {
 
 /** Ribbon label */
 .ribbon-wrapper-green {
-    width: 85px;
+   
     height: 88px;
     overflow: hidden;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -45px;
 }
 .ribbon-green {
     color: #333;

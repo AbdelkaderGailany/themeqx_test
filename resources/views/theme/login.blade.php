@@ -8,7 +8,7 @@
             <div class="col-sm-6 col-sm-offset-3 col-xs-12">
 
                 <div class="login">
-                    <h3 class="authTitle">Login or <a href="{{ route('user.create') }}" class="btn btn-xl btn-default">Sign up</a></h3>
+                    <h3 class="authTitle">تسجيل الدخول او <a href="{{ route('user.create') }}" class="btn btn-xl btn-default">قم بالتسجيل</a></h3>
 
                     @if(session('registration_success'))
                         <div class="alert alert-success">
@@ -43,7 +43,7 @@
                         <div class="row row-sm-offset-3 loginOr">
                             <div class="col-xs-12">
                                 <hr class="hrOr">
-                                <span class="spanOr">or</span>
+
                             </div>
                         </div>
 
@@ -55,7 +55,7 @@
 
                                 <div class="input-group {{ $errors->has('email')? 'has-error':'' }}">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="email address">
+                                    <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="البريد الألكتروني">
 
                                 </div>
                                 {!! $errors->has('email')? '<p class="help-block">'.$errors->first('email').'</p>':'' !!}
@@ -63,20 +63,20 @@
 
                                 <div class="input-group {{ $errors->has('password')? 'has-error':'' }}">
                                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                    <input  type="password" class="form-control" name="password" placeholder="Password">
+                                    <input  type="password" class="form-control" name="password" placeholder="كلمة المرور">
                                 </div>
                                 {!! $errors->has('password')? '<p class="help-block">'.$errors->first('password').'</p>':'' !!}
 
                                 <span class="help-block"></span>
-                                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">تسجيل الدخول</button>
                             </form>
                         </div>
                     </div>
                     <div class="row row-sm-offset-3">
                         <div class="col-xs-12">
                             <div class="col-xs-12 col-sm-6">
+                                    <input type="checkbox" value="remember-me">تذكرني
                                 <label class="checkbox">
-                                    <input type="checkbox" value="remember-me">Remember Me
                                 </label>
                             </div>
                             <div class="col-xs-12 col-sm-6">

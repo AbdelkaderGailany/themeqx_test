@@ -5,13 +5,11 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 pull-right">
                 <div class="bg-white">
                     <div class="sidebar-filter-wrapper">
 
-                        @if($enable_monetize)
-                            {!! get_option('monetize_code_listing_sidebar_top') !!}
-                        @endif
+                   
 
                         <form action="" id="listingFilterForm" method="get"> @csrf
 
@@ -205,7 +203,7 @@
                                             @foreach($premium_ads as $ad)
                                                 @php session('grid_list_view') ? (session('grid_list_view') == 'grid'? $ad->increase_impression() :'none') : $ad->increase_impression(); @endphp
 
-                                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                                <div class="col-md-4 col-sm-6 col-xs-12 pull-right">
                                                     <div itemscope itemtype="http://schema.org/Product" class="ads-item-thumbnail ad-box-{{$ad->price_plan}}">
                                                         <div class="ads-thumbnail">
                                                             <a href="{{  route('single_ad', [$ad->id, $ad->slug]) }}">
@@ -287,7 +285,7 @@
 
                             <div class="row">
                                 @foreach($ads as $ad)
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="col-md-4 col-sm-6 col-xs-12 pull-right">
                                         <div itemscope itemtype="http://schema.org/Product" class="ads-item-thumbnail ad-box-{{$ad->price_plan}}">
                                             <div class="ads-thumbnail">
                                                 <a href="{{  route('single_ad', [$ad->id, $ad->slug]) }}">

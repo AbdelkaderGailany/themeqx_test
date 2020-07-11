@@ -108,8 +108,8 @@
                         <div class="form-group {{ $errors->has('condition')? 'has-error':'' }}">
                             <div class="col-sm-8">
                                 <select class="form-control select2NoSearch" name="condition" id="condition">
-                                    <option value="new" {{ old('condition') == 'new' ? 'selected':'' }}>@lang('app.new')</option>
-                                    <option value="used" {{ old('condition') == 'used' ? 'selected':'' }}>@lang('app.used')</option>
+                                    <option value="جديد" {{ old('condition') == 'new' ? 'selected':'' }}>@lang('app.new')</option>
+                                    <option value="مستعمل" {{ old('condition') == 'used' ? 'selected':'' }}>@lang('app.used')</option>
                                 </select>
                                 {!! $errors->has('condition')? '<p class="help-block">'.$errors->first('condition').'</p>':'' !!}
                             </div>

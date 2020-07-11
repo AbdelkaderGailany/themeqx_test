@@ -5,7 +5,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 pull-right">
                 <div class="bg-white">
                     <div class="sidebar-filter-wrapper">
 
@@ -72,17 +72,8 @@
                                 </select>
                             </div>
                         @endif
-
-                        <div class="form-group">
-                            <select class="form-control select2" id="state_select" name="state">
-                                <option value=""> @lang('app.select_state') </option>
-                                @if($selected_countries)
-                                    @foreach($selected_countries->states as $state)
-                                        <option value="{{ $state->id }}" {{ request('state') ==  $state->id ? 'selected':'' }} >{{ $state->state_name }}</option>
-                                    @endforeach
-                                @endif
-                            </select>
-                        </div>
+ 
+                      
 
                         <div class="form-group">
                             <select class="form-control select2" id="city_select" name="city">
@@ -162,13 +153,13 @@
                         ?>
 
                         <div class="listingTopFilterBar">
-                            <ul class="filterAdType pull-left">
+                            <ul class="filterAdType pull-right">
                                 <li class="{{ request('adType') == false || request('adType') == 'all'? 'active':'' }}"><a href="{{ $allAdTab }}">@lang('app.all_ads') <small>({{ $personal_ads_count + $business_ads_count }})</small></a> </li>
                                 <li class="{{ request('adType') == 'personal'? 'active':'' }}"><a href="{{ $personalAdTab }}">@lang('app.personal') <small>({{ $personal_ads_count }})</small></a> </li>
                                 <li class="{{ request('adType') == 'business'? 'active':'' }}"><a href="{{ $businessAdTab }}">@lang('app.business') <small>({{ $business_ads_count }})</small></a> </li>
                             </ul>
 
-                            <ul class="listingViewIcon pull-right">
+                            <ul class="listingViewIcon pull-left">
                                 <li class="dropdown shortByListingLi">
                                     <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">@lang('app.short_by') <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
@@ -187,19 +178,11 @@
                 </div>
 
 
-                @if($enable_monetize)
-                    <div class="row">
-                        <div class="col-sm-12">
-                            {!! get_option('monetize_code_listing_above_premium_ads') !!}
-                        </div>
-                    </div>
-                @endif
-
-
+                
+            
                 <div class="ad-box-wrap">
                     @if( ! request('user_id'))
-                        @if($premium_ads)
-                            @if($premium_ads->count() > 0)
+                        
                                 <div class="ad-box-premium-wrap">
                                     <div class="ad-box-grid-view" style="display: {{ session('grid_list_view') ? (session('grid_list_view') == 'grid'? 'block':'none') : 'block' }};">
                                         <div class="row">
@@ -233,13 +216,7 @@
                                                             <link itemprop="availability" href="http://schema.org/InStock" />
                                                         </div>
 
-                                                        @if($ad->price_plan == 'premium')
-                                                            <div class="ribbon-wrapper-green"><div class="ribbon-green">{{ ucfirst($ad->price_plan) }}</div></div>
-                                                        @endif
-                                                        @if($ad->mark_ad_urgent == '1')
-                                                            <div class="ribbon-wrapper-red"><div class="ribbon-red">@lang('app.urgent')</div></div>
-                                                        @endif
-
+                                                       
                                                     </div>
                                                 </div>
                                             @endforeach
@@ -293,8 +270,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endif
-                        @endif
+                         
                     @endif
 
 
@@ -341,14 +317,6 @@
                                                 <p class="price"> <span itemprop="price" content="{{$ad->price}}"> {{ themeqx_price_ng($ad->price, $ad->is_negotiable) }} </span></p>
                                                 <link itemprop="availability" href="http://schema.org/InStock" />
                                             </div>
-
-
-                                            @if($ad->price_plan == 'premium')
-                                                <div class="ribbon-wrapper-green"><div class="ribbon-green">{{ ucfirst($ad->price_plan) }}</div></div>
-                                            @endif
-                                            @if($ad->mark_ad_urgent == '1')
-                                                <div class="ribbon-wrapper-red"><div class="ribbon-red">@lang('app.urgent')</div></div>
-                                            @endif
 
                                         </div>
                                     </div>
