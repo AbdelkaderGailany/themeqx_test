@@ -32,10 +32,7 @@
                                 <th>@lang('app.name')</th>
                                 <td>{{ $user->name }}</td>
                             </tr>
-                            <tr>
-                                <th>@lang('app.user_name')</th>
-                                <td>{{ $user->user_name }}</td>
-                            </tr>
+                            
                             <tr>
                                 <th>@lang('app.email')</th>
                                 <td>{{ $user->email }}</td>

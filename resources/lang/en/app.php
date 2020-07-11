@@ -456,9 +456,9 @@ return [
     //16/10/2016
     'pick_a_good_price'         => 'اختر سعراً جيدأً .',
     //27/10/2016
-    'administrators'            => 'المسؤولون',
+    'administrators'            => 'المسؤلون',
     'last_login'                => 'آخر تسجيل دخول',
-    'add_administrator'         => 'إضافة مسؤول',
+    'add_administrator'         => 'إضافة مسؤل',
     'administrator_unblocked'   => 'تم إلغاء حظر المسؤول',
     'administrator_blocked'     => 'تم حظر المسؤول',
     'related_ads'               => 'إعلانات ذات صلة',
