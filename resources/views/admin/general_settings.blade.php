@@ -26,36 +26,33 @@
 
 
                         <div class="form-group {{ $errors->has('site_name')? 'has-error':'' }}">
-                            <label for="site_name" class="col-sm-4 control-label">@lang('app.site_name')</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="site_name" value="{{ old('site_name')? old('site_name') : get_option('site_name') }}" name="site_name" placeholder="@lang('app.site_name')">
                                 {!! $errors->has('site_name')? '<p class="help-block">'.$errors->first('site_name').'</p>':'' !!}
                             </div>
+                            <label for="site_name" class="col-sm-4 control-label">@lang('app.site_name')</label>
                         </div>
 
                         <div class="form-group {{ $errors->has('site_title')? 'has-error':'' }}">
-                            <label for="site_title" class="col-sm-4 control-label">@lang('app.site_title')</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="site_title" value="{{ old('site_title')? old('site_title') : get_option('site_title') }}" name="site_title" placeholder="@lang('app.site_title')">
                                 {!! $errors->has('site_title')? '<p class="help-block">'.$errors->first('site_title').'</p>':'' !!}
                             </div>
+                            <label for="site_title" class="col-sm-4 control-label">@lang('app.site_title')</label>
                         </div>
 
                         <div class="form-group {{ $errors->has('email_address')? 'has-error':'' }}">
-                            <label for="email_address" class="col-sm-4 control-label">@lang('app.email_address')</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="email_address" value="{{ old('email_address')? old('email_address') : get_option('email_address') }}" name="email_address" placeholder="@lang('app.email_address')">
                                 {!! $errors->has('email_address')? '<p class="help-block">'.$errors->first('email_address').'</p>':'' !!}
                                 <p class="text-info"> @lang('app.email_address_help_text')</p>
                             </div>
+                            <label for="email_address" class="col-sm-4 control-label">@lang('app.email_address')</label>
                         </div>
 
 
 
                         <div class="form-group">
-                            <label for="default_timezone" class="col-sm-4 control-label">
-                                @lang('app.default_timezone')
-                            </label>
                             <div class="col-sm-8 {{ $errors->has('default_timezone')? 'has-error':'' }}">
                                 <select class="form-control select2" name="default_timezone" id="default_timezone">
                                     @php $saved_timezone = get_option('default_timezone'); @endphp
@@ -69,12 +66,14 @@
                                 {!! $errors->has('default_timezone')? '<p class="help-block">'.$errors->first('default_timezone').'</p>':'' !!}
                                 <p class="text-info">@lang('app.default_timezone_help_text')</p>
                             </div>
+                            <label for="default_timezone" class="col-sm-4 control-label">
+                                @lang('app.default_timezone')
+                            </label>
                         </div>
 
 
 
                         <div class="form-group {{ $errors->has('date_format')? 'has-error':'' }}">
-                            <label for="email_address" class="col-sm-4 control-label">@lang('app.date_format')</label>
                             <div class="col-sm-8">
                                 <fieldset>
                                     @php $saved_date_format = get_option('date_format'); @endphp
@@ -92,12 +91,12 @@
                                 </fieldset>
                                 <p class="text-info"> @lang('app.date_format_help_text')</p>
                             </div>
+                            <label for="email_address" class="col-sm-4 control-label">@lang('app.date_format')</label>
                         </div>
 
 
 
                         <div class="form-group {{ $errors->has('time_format')? 'has-error':'' }}">
-                            <label for="email_address" class="col-sm-4 control-label">@lang('app.time_format')</label>
                             <div class="col-sm-8">
                                 <fieldset>
                                     <label><input type="radio" value="g:i a" name="time_format" {{ get_option('time_format') == 'g:i a'? 'checked':'' }}> {{ date('g:i a') }}<code>g:i a</code></label> <br />
@@ -111,10 +110,10 @@
                                 </fieldset>
                                 <p><a href="http://php.net/manual/en/function.date.php" target="_blank">@lang('app.date_time_read_more')</a> </p>
                             </div>
+                            <label for="email_address" class="col-sm-4 control-label">@lang('app.time_format')</label>
                         </div>
 
                         <div class="form-group {{ $errors->has('currency_sign')? 'has-error':'' }}">
-                            <label for="currency_sign" class="col-sm-4 control-label">@lang('app.currency_sign')</label>
                             <div class="col-sm-8">
                                 {{--<input type="text" class="form-control" id="currency_sign" value="{{ old('currency_sign')? old('currency_sign') : get_option('currency_sign') }}" name="currency_sign" placeholder="@lang('app.currency_sign')">
                                 {!! $errors->has('currency_sign')? '<p class="help-block">'.$errors->first('currency_sign').'</p>':'' !!}--}}
@@ -126,31 +125,30 @@
                                         <option value="{{ $code }}"  {{ $current_currency == $code? 'selected':'' }}> {{ $code }} </option>
                                     @endforeach
                                 </select>
-
-
                             </div>
+                            <label for="currency_sign" class="col-sm-4 control-label">@lang('app.currency_sign')</label>
                         </div>
 
 
                         <div class="form-group {{ $errors->has('logo_settings')? 'has-error':'' }}">
-                            <label for="email_address" class="col-sm-4 control-label">@lang('app.logo_settings')</label>
                             <div class="col-sm-8">
                                 <fieldset>
                                     <label><input type="radio" value="show_site_name" name="logo_settings" {{ get_option('logo_settings') == 'show_site_name'? 'checked':'' }}> @lang('app.show_site_name') </label> <br />
                                     <label><input type="radio" value="show_image" name="logo_settings" {{ get_option('logo_settings') == 'show_image'? 'checked':'' }}> @lang('app.show_image') </label> <br />
                                 </fieldset>
                             </div>
+                            <label for="email_address" class="col-sm-4 control-label">@lang('app.logo_settings')</label>
                         </div>
 
 
                         <div class="form-group {{ $errors->has('verification_email_after_registration')? 'has-error':'' }}">
-                            <label for="email_address" class="col-sm-4 control-label">@lang('app.verification_email_after_registration')</label>
                             <div class="col-sm-8">
                                 <fieldset>
                                     <label><input type="radio" value="1" name="verification_email_after_registration" {{ get_option('verification_email_after_registration') == '1'? 'checked':'' }}> @lang('app.yes') </label> <br />
                                     <label><input type="radio" value="0" name="verification_email_after_registration" {{ get_option('verification_email_after_registration') == '0'? 'checked':'' }}> @lang('app.no') </label> <br />
                                 </fieldset>
                             </div>
+                            <label for="email_address" class="col-sm-4 control-label">@lang('app.verification_email_after_registration')</label>
                         </div>
 
                         <hr />
@@ -163,12 +161,8 @@
                         </form>
                     </div>
                 </div>
-
             </div>   <!-- /#page-wrapper -->
-
         </div>   <!-- /#wrapper -->
-
-
     </div> <!-- /#container -->
 @endsection
 

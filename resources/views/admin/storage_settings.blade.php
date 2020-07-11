@@ -24,7 +24,6 @@
 
                         <form action="{{route('save_settings')}}" class="form-horizontal" enctype="multipart/form-data" method="post"> @csrf
                         <div class="form-group {{ $errors->has('default_storage')? 'has-error':'' }}">
-                            <label for="default_storage" class="col-sm-4 control-label">@lang('app.default_storage')</label>
                             <div class="col-sm-8">
                                 <label>
                                     <input type="radio" name="default_storage" value="public" {{ get_option('default_storage') == 'public'? 'checked' :'' }} /> @lang('app.local_server') <small class="text-info"> (@lang('app.local_server_help_text')) </small>
@@ -34,6 +33,7 @@
                                 </label>
 
                             </div>
+                            <label for="default_storage" class="col-sm-4 control-label">@lang('app.default_storage')</label>
                         </div>
 
 

@@ -25,7 +25,6 @@
                         <form action="{{route('save_settings')}}" class="form-horizontal" enctype="multipart/form-data" method="post"> @csrf
 
                             <div class="form-group {{ $errors->has('ads_moderation')? 'has-error':'' }}">
-                                <label for="ads_moderation" class="col-sm-4 control-label">@lang('app.ads_moderation')</label>
                                 <div class="col-sm-8">
 
                                     <label>
@@ -36,10 +35,10 @@
                                     </label>
 
                                 </div>
+                                <label for="ads_moderation" class="col-sm-4 control-label">@lang('app.ads_moderation')</label>
                             </div>
 
                             <div class="form-group {{ $errors->has('ads_price_plan')? 'has-error':'' }}">
-                                <label for="ads_price_plan" class="col-sm-4 control-label">@lang('app.ads_price_plan')</label>
                                 <div class="col-sm-8">
 
                                     <label>
@@ -57,6 +56,7 @@
                                     <p class="text-info"> @lang('app.ads_price_plan_help_text')</p>
 
                                 </div>
+                                <label for="ads_price_plan" class="col-sm-4 control-label">@lang('app.ads_price_plan')</label>
                             </div>
 
 
@@ -64,30 +64,30 @@
                             <div class="set_pricing_wrap" style="display: {{ get_option('ads_price_plan') == 'all_ads_free' ? 'none':'block' }};">
 
                                 <div id="regular_ads_price_wrap" class="form-group {{ $errors->has('regular_ads_price')? 'has-error':'' }}" style="display: {{ get_option('ads_price_plan') == 'regular_ads_free_premium_paid' ? 'none':'block' }};">
-                                    <label for="regular_ads_price" class="col-sm-4 control-label">@lang('app.regular_ads_price')</label>
                                     <div class="col-sm-8">
                                         <input type="number" min="1" class="form-control" id="regular_ads_price" value="{{ get_option('regular_ads_price') }}" name="regular_ads_price" placeholder="@lang('app.regular_ads_price')">
                                         {!! $errors->has('regular_ads_price')? '<p class="help-block">'.$errors->first('regular_ads_price').'</p>':'' !!}
                                         <p class="text-info"> @lang('app.regular_ads_price_help_text')</p>
                                     </div>
+                                    <label for="regular_ads_price" class="col-sm-4 control-label">@lang('app.regular_ads_price')</label>
                                 </div>
 
                                 <div id="premium_ads_price_wrap" class="form-group {{ $errors->has('premium_ads_price')? 'has-error':'' }}">
-                                    <label for="premium_ads_price" class="col-sm-4 control-label">@lang('app.premium_ads_price')</label>
                                     <div class="col-sm-8">
                                         <input type="number" min="1"  class="form-control"  id="premium_ads_price" value="{{ get_option('premium_ads_price') }}" name="premium_ads_price" placeholder="@lang('app.premium_ads_price')">
                                         {!! $errors->has('premium_ads_price')? '<p class="help-block">'.$errors->first('premium_ads_price').'</p>':'' !!}
                                         <p class="text-info"> @lang('app.premium_ads_price_help_text')</p>
                                     </div>
+                                    <label for="premium_ads_price" class="col-sm-4 control-label">@lang('app.premium_ads_price')</label>
                                 </div>
 
                                 <div id="urgent_ads_price_wrap" class="form-group {{ $errors->has('urgent_ads_price')? 'has-error':'' }}">
-                                    <label for="urgent_ads_price" class="col-sm-4 control-label">@lang('app.urgent_ads_price')</label>
                                     <div class="col-sm-8">
                                         <input type="number" min="1"  class="form-control"  id="urgent_ads_price" value="{{ get_option('urgent_ads_price') }}" name="urgent_ads_price" placeholder="@lang('app.urgent_ads_price')">
                                         {!! $errors->has('urgent_ads_price')? '<p class="help-block">'.$errors->first('urgent_ads_price').'</p>':'' !!}
                                         <p class="text-info"> @lang('app.urgent_ads_price_help_text')</p>
                                     </div>
+                                    <label for="urgent_ads_price" class="col-sm-4 control-label">@lang('app.urgent_ads_price')</label>
                                 </div>
 
                             </div>
@@ -96,73 +96,72 @@
                             <hr />
 
                             <div class="form-group {{ $errors->has('number_of_urgent_ads_in_home')? 'has-error':'' }}">
-                                <label for="number_of_urgent_ads_in_home" class="col-sm-4 control-label">@lang('app.number_of_urgent_ads_in_home')</label>
                                 <div class="col-sm-8">
                                     <input type="number" min="1"  class="form-control" id="number_of_urgent_ads_in_home" value="{{ get_option('number_of_urgent_ads_in_home') }}" name="number_of_urgent_ads_in_home" placeholder="@lang('app.number_of_urgent_ads_in_home')">
                                     {!! $errors->has('number_of_urgent_ads_in_home')? '<p class="help-block">'.$errors->first('number_of_urgent_ads_in_home').'</p>':'' !!}
                                     <p class="text-info"> @lang('app.number_of_urgent_ads_in_home_help_text')</p>
                                 </div>
+                                <label for="number_of_urgent_ads_in_home" class="col-sm-4 control-label">@lang('app.number_of_urgent_ads_in_home')</label>
                             </div>
 
 
                             <div class="form-group {{ $errors->has('number_of_premium_ads_in_home')? 'has-error':'' }}">
-                                <label for="number_of_premium_ads_in_home" class="col-sm-4 control-label">@lang('app.number_of_premium_ads_in_home')</label>
                                 <div class="col-sm-8">
                                     <input type="number" min="1"  class="form-control" id="number_of_premium_ads_in_home" value="{{ get_option('number_of_premium_ads_in_home') }}" name="number_of_premium_ads_in_home" placeholder="@lang('app.number_of_premium_ads_in_home')">
                                     {!! $errors->has('number_of_premium_ads_in_home')? '<p class="help-block">'.$errors->first('number_of_premium_ads_in_home').'</p>':'' !!}
                                     <p class="text-info"> @lang('app.number_of_premium_ads_in_home_help_text')</p>
                                 </div>
+                                <label for="number_of_premium_ads_in_home" class="col-sm-4 control-label">@lang('app.number_of_premium_ads_in_home')</label>
                             </div>
 
                             <div class="form-group {{ $errors->has('number_of_free_ads_in_home')? 'has-error':'' }}">
-                                <label for="number_of_free_ads_in_home" class="col-sm-4 control-label">@lang('app.number_of_free_ads_in_home')</label>
                                 <div class="col-sm-8">
                                     <input type="number" min="1"  class="form-control" id="number_of_free_ads_in_home" value="{{ get_option('number_of_free_ads_in_home') }}" name="number_of_free_ads_in_home" placeholder="@lang('app.number_of_free_ads_in_home')">
                                     {!! $errors->has('number_of_free_ads_in_home')? '<p class="help-block">'.$errors->first('number_of_free_ads_in_home').'</p>':'' !!}
                                     <p class="text-info"> @lang('app.number_of_free_ads_in_home_help_text')</p>
                                 </div>
+                                <label for="number_of_free_ads_in_home" class="col-sm-4 control-label">@lang('app.number_of_free_ads_in_home')</label>
                             </div>
 
                             <div class="form-group {{ $errors->has('ads_per_page')? 'has-error':'' }}">
-                                <label for="ads_per_page" class="col-sm-4 control-label">@lang('app.ads_per_page')</label>
                                 <div class="col-sm-8">
                                     <input type="number" min="1"  class="form-control" id="ads_per_page" value="{{ get_option('ads_per_page') }}" name="ads_per_page" placeholder="@lang('app.ads_per_page')">
                                     {!! $errors->has('ads_per_page')? '<p class="help-block">'.$errors->first('ads_per_page').'</p>':'' !!}
                                     <p class="text-info"> @lang('app.ads_per_page_help_text')</p>
                                 </div>
+                                <label for="ads_per_page" class="col-sm-4 control-label">@lang('app.ads_per_page')</label>
                             </div>
 
 
                             <hr />
                             <div class="form-group {{ $errors->has('number_of_premium_ads_in_listing')? 'has-error':'' }}">
-                                <label for="number_of_premium_ads_in_listing" class="col-sm-4 control-label">@lang('app.number_of_premium_ads_in_listing')</label>
                                 <div class="col-sm-8">
                                     <input type="number" min="1"  class="form-control" id="number_of_premium_ads_in_listing" value="{{ get_option('number_of_premium_ads_in_listing') }}" name="number_of_premium_ads_in_listing" placeholder="@lang('app.number_of_premium_ads_in_listing')">
                                     <p class="text-info"> @lang('app.number_of_premium_ads_in_listing_help_text')</p>
                                 </div>
+                                <label for="number_of_premium_ads_in_listing" class="col-sm-4 control-label">@lang('app.number_of_premium_ads_in_listing')</label>
                             </div>
 
                             <div class="form-group {{ $errors->has('premium_ads_max_impressions')? 'has-error':'' }}">
-                                <label for="premium_ads_max_impressions" class="col-sm-4 control-label">@lang('app.premium_ads_max_impressions')</label>
                                 <div class="col-sm-8">
                                     <input type="number" min="1"  class="form-control" id="premium_ads_max_impressions" value="{{ get_option('premium_ads_max_impressions') }}" name="premium_ads_max_impressions" placeholder="@lang('app.premium_ads_max_impressions')">
                                     {!! $errors->has('premium_ads_max_impressions')? '<p class="help-block">'.$errors->first('premium_ads_max_impressions').'</p>':'' !!}
                                     <p class="text-info"> @lang('app.premium_ads_max_impressions_help_text')</p>
                                 </div>
+                                <label for="premium_ads_max_impressions" class="col-sm-4 control-label">@lang('app.premium_ads_max_impressions')</label>
                             </div>
 
                             <div class="form-group {{ $errors->has('number_of_last_days_premium_ads')? 'has-error':'' }}">
-                                <label for="number_of_last_days_premium_ads" class="col-sm-4 control-label">@lang('app.number_of_last_days_premium_ads')</label>
                                 <div class="col-sm-8">
                                     <input type="number" min="1"  class="form-control" id="number_of_last_days_premium_ads" value="{{ get_option('number_of_last_days_premium_ads') }}" name="number_of_last_days_premium_ads" placeholder="@lang('app.number_of_last_days_premium_ads')">
                                     <p class="text-info"> @lang('app.number_of_last_days_premium_ads_help_text')</p>
                                 </div>
+                                <label for="number_of_last_days_premium_ads" class="col-sm-4 control-label">@lang('app.number_of_last_days_premium_ads')</label>
                             </div>
 
 
 
                             <div class="form-group {{ $errors->has('order_by_premium_ads_in_listing')? 'has-error':'' }}">
-                                <label class="col-sm-4 control-label">@lang('app.order_by_premium_ads_in_listing_help_text')</label>
                                 <div class="col-sm-8">
 
                                     <label>
@@ -174,18 +173,19 @@
 
                                     <p class="text-info"> @lang('app.order_by_premium_ads_in_listing_help_text')</p>
                                 </div>
+                                <label class="col-sm-4 control-label">@lang('app.order_by_premium_ads_in_listing_help_text')</label>
                             </div>
 
 
                             <div class="form-group {{ $errors->has('enable_related_ads')? 'has-error':'' }}">
-                                <label class="col-md-4 control-label">@lang('app.enable_disable') </label>
                                 <div class="col-md-8">
                                     <label for="enable_related_ads" class="checkbox-inline">
                                         <input type="checkbox" value="1" id="enable_related_ads" name="enable_related_ads" {{ get_option('enable_related_ads') == 1 ? 'checked="checked"': '' }}>
-                                        @lang('app.related_ads')
                                     </label>
+                                        @lang('app.related_ads')
 
                                     {!! $errors->has('type')? '<p class="help-block">'.$errors->first('type').'</p>':'' !!}
+                                <label class="col-md-4 control-label">@lang('app.enable_disable') </label>
                                 </div>
                             </div>
 

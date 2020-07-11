@@ -27,7 +27,6 @@
                         <form action="" class="form-horizontal" enctype="multipart/form-data" method="post"> @csrf
 
                             <div class="form-group  {{ $errors->has('logo')? 'has-error':'' }}">
-                                <label class="col-sm-4 control-label">@lang('app.site_logo')</label>
                                 <div class="col-sm-8">
 
                                     @if(logo_url())
@@ -38,6 +37,7 @@
                                     <input type="file" id="logo" name="logo" class="filestyle" >
                                     {!! $errors->has('logo')? '<p class="help-block">'.$errors->first('logo').'</p>':'' !!}
                                 </div>
+                                <label class="col-sm-4 control-label">@lang('app.site_logo')</label>
                             </div>
 
 

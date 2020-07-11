@@ -149,7 +149,6 @@
         </div>
     </div>
 
-
 @endsection
 
 @section('page-js')

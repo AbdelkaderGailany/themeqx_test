@@ -26,36 +26,35 @@
 
                         <legend>@lang('app.social_login')</legend>
                         <div class="form-group {{ $errors->has('enable_social_login')? 'has-error':'' }}">
-                            <label class="col-md-4 control-label">@lang('app.enable_disable') </label>
                             <div class="col-md-8">
                                 <label for="enable_social_login" class="checkbox-inline">
                                     <input type="checkbox" value="1" id="enable_social_login" name="enable_social_login" {{ get_option('enable_social_login') == 1 ? 'checked="checked"': '' }}>
-                                    @lang('app.enable_social_login')
                                 </label>
+                                    @lang('app.enable_social_login')
 
-                                <p class="text-info">@lang('app.enable_social_login_help_text')</p>
                             </div>
+                            <label class="col-md-4 control-label">@lang('app.enable_disable') </label>
                         </div>
 
 
                         <div class="form-group {{ $errors->has('enable_facebook_login')? 'has-error':'' }}">
-                            <label class="col-md-4 control-label">@lang('app.enable_disable') </label>
                             <div class="col-md-8">
                                 <label for="enable_facebook_login" class="checkbox-inline">
                                     <input type="checkbox" value="1" id="enable_facebook_login" name="enable_facebook_login" {{ get_option('enable_facebook_login') == 1 ? 'checked="checked"': '' }}>
-                                    @lang('app.enable_facebook_login')
                                 </label>
+                                    @lang('app.enable_facebook_login')
                             </div>
+                            <label class="col-md-4 control-label">@lang('app.enable_disable') </label>
                         </div>
 
                         <div class="form-group {{ $errors->has('enable_google_login')? 'has-error':'' }}">
-                            <label class="col-md-4 control-label">@lang('app.enable_disable') </label>
                             <div class="col-md-8">
                                 <label for="enable_google_login" class="checkbox-inline">
                                     <input type="checkbox" value="1" id="enable_google_login" name="enable_google_login" {{ get_option('enable_google_login') == 1 ? 'checked="checked"': '' }}>
-                                    @lang('app.enable_google_login')
                                 </label>
+                                    @lang('app.enable_google_login')
                             </div>
+                            <label class="col-md-4 control-label">@lang('app.enable_disable') </label>
                         </div>
 
 
@@ -64,17 +63,17 @@
                         <div id="facebook_login_api_wrap" style="display: {{ get_option('enable_facebook_login') == 1 ? 'block' : 'none' }};">
                             <hr />
                             <div class="form-group">
-                                <label for="fb_app_id" class="col-sm-4 control-label">@lang('app.facebook') @lang('app.app_id')</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="fb_app_id" value="{{ get_option('fb_app_id') }}" name="fb_app_id" placeholder="@lang('app.fb_app_id')">
                                 </div>
+                                <label for="fb_app_id" class="col-sm-4 control-label">@lang('app.facebook') @lang('app.app_id')</label>
                             </div>
 
                             <div class="form-group">
-                                <label for="fb_app_secret" class="col-sm-4 control-label">@lang('app.facebook') @lang('app.app_secret')</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="fb_app_secret" value="{{ get_option('fb_app_secret') }}" name="fb_app_secret" placeholder="@lang('app.app_secret')">
                                 </div>
+                                <label for="fb_app_secret" class="col-sm-4 control-label">@lang('app.facebook') @lang('app.app_secret')</label>
                             </div>
 
                         </div>
@@ -83,16 +82,16 @@
                         <div id="google_login_api_wrap" style="display: {{ get_option('enable_google_login') == 1 ? 'block' : 'none' }};">
                             <hr />
                             <div class="form-group">
-                                <label for="google_client_id" class="col-sm-4 control-label">@lang('app.google') @lang('app.client_id')</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="google_client_id" value="{{ get_option('google_client_id') }}" name="google_client_id" placeholder="@lang('app.google_client_id')">
                                 </div>
+                                <label for="google_client_id" class="col-sm-4 control-label">@lang('app.google') @lang('app.client_id')</label>
                             </div>
 
                             <div class="form-group">
-                                <label for="google_client_secret" class="col-sm-4 control-label">@lang('app.google') @lang('app.client_secret')</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="google_client_secret" value="{{ get_option('google_client_secret') }}" name="google_client_secret" placeholder="@lang('app.app_secret')">
+                                <label for="google_client_secret" class="col-sm-4 control-label">@lang('app.google') @lang('app.client_secret')</label>
                                 </div>
                             </div>
 
