@@ -28,7 +28,6 @@
                         <legend>@lang('app.ad_info')</legend>
 
                         <div class="form-group  {{ $errors->has('category')? 'has-error':'' }}">
-                            <label for="category_name" class="col-sm-4 control-label">@lang('app.category')</label>
                             <div class="col-sm-8">
                                 <select class="form-control select2" name="category">
                                     <option value="">@lang('app.select_a_category')</option>
@@ -44,13 +43,11 @@
                                 </select>
                                 {!! $errors->has('category')? '<p class="help-block">'.$errors->first('category').'</p>':'' !!}
                             </div>
+                            <label for="category_name" class="col-sm-4 control-label">@lang('app.category')</label>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="brand_select" class="col-sm-4 control-label">
-                                @lang('app.brand')
-                            </label>
                             <div class="col-sm-8 {{ $errors->has('brand')? 'has-error':'' }}">
                                 <select class="form-control select2" name="brand" id="brand_select">
                                     @if($previous_brands->count() > 0)
@@ -66,47 +63,49 @@
                                 </p>
 
                             </div>
+                            <label for="brand_select" class="col-sm-4 control-label">
+                                @lang('app.brand')
+                            </label>
                         </div>
 
 
                         <div class="form-group {{ $errors->has('ad_title')? 'has-error':'' }}">
-                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.ad_title')</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="ad_title" value="{{ old('ad_title') }}" name="ad_title" placeholder="@lang('app.ad_title')">
                                 {!! $errors->has('ad_title')? '<p class="help-block">'.$errors->first('ad_title').'</p>':'' !!}
                                 <p class="text-info"> @lang('app.great_title_info')</p>
                             </div>
+                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.ad_title')</label>
                         </div>
 
                         <div class="form-group {{ $errors->has('ad_description')? 'has-error':'' }}">
-                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.ad_description')</label>
                             <div class="col-sm-8">
                                 <textarea name="ad_description" class="form-control" rows="8">{{ old('ad_description') }}</textarea>
                                 {!! $errors->has('ad_description')? '<p class="help-block">'.$errors->first('ad_description').'</p>':'' !!}
                                 <p class="text-info"> @lang('app.ad_description_info_text')</p>
                             </div>
+                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.ad_description')</label>
                         </div>
 
 
 
                         <div class="form-group required {{ $errors->has('type')? 'has-error':'' }}">
-                            <label class="col-md-4 control-label">@lang('app.add_type') </label>
                             <div class="col-md-8">
                                 <label for="type_private" class="radio-inline">
-                                    <input type="radio" value="personal" id="type_private" name="type"  {{ old('type') == 'personal'? 'checked="checked"' : '' }}>
                                     @lang('app.private')
+                                    <input type="radio" value="personal" id="type_private" name="type"  {{ old('type') == 'personal'? 'checked="checked"' : '' }}>
                                 </label>
                                 <label for="type_business" class="radio-inline">
-                                    <input type="radio" value="business" id="type_business" name="type" {{ old('type') == 'business'? 'checked="checked"' : '' }}>
 
                                     @lang('app.business')
+                                    <input type="radio" value="business" id="type_business" name="type" {{ old('type') == 'business'? 'checked="checked"' : '' }}>
                                 </label>
                                 {!! $errors->has('type')? '<p class="help-block">'.$errors->first('type').'</p>':'' !!}
                             </div>
+                            <label class="col-md-4 control-label">@lang('app.add_type') </label>
                         </div>
 
                         <div class="form-group {{ $errors->has('condition')? 'has-error':'' }}">
-                            <label for="condition" class="col-sm-4 control-label">@lang('app.condition')</label>
                             <div class="col-sm-8">
                                 <select class="form-control select2NoSearch" name="condition" id="condition">
                                     <option value="new" {{ old('condition') == 'new' ? 'selected':'' }}>@lang('app.new')</option>
@@ -114,6 +113,7 @@
                                 </select>
                                 {!! $errors->has('condition')? '<p class="help-block">'.$errors->first('condition').'</p>':'' !!}
                             </div>
+                            <label for="condition" class="col-sm-4 control-label">@lang('app.condition')</label>
                         </div>
 
 
@@ -125,19 +125,11 @@
                                     <input type="text" placeholder="@lang('app.ex_price')" class="form-control" name="price" id="price" value="{{ old('price') }}">
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="1" name="negotiable" id="negotiable" {{ old('negotiable') == 1 ? 'checked':'' }}>
-                                        @lang('app.negotiable')
-                                    </label>
-                                </div>
-                            </div>
+                            
 
                             <div class="col-sm-8 col-md-offset-4">
                                 {!! $errors->has('price')? '<p class="help-block">'.$errors->first('price').'</p>':'' !!}
-                                <p class="text-info">@lang('app.pick_a_good_price') </p>
-                            </div>
+                           </div>
 
                         </div>
 
@@ -164,7 +156,7 @@
                                 </div>
 
 
-                                <div class="file-upload-wrap">
+                                <div class="file-upload-wrap pull-right">
                                     <label>
                                         <input type="file" name="images" id="images" style="display: none;" />
                                         <i class="fa fa-cloud-upload"></i>
@@ -181,20 +173,19 @@
 
 
                         <div class="form-group {{ $errors->has('video_url')? 'has-error':'' }}">
-                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.video_url')</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="video_url" value="{{ old('video_url') }}" name="video_url" placeholder="@lang('app.video_url')">
                                 {!! $errors->has('video_url')? '<p class="help-block">'.$errors->first('video_url').'</p>':'' !!}
                                 <p class="help-block">@lang('app.video_url_help')</p>
                                 <p class="text-info">@lang('app.video_url_help_for_modern_theme')</p>
                             </div>
+                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.video_url')</label>
                         </div>
 
 
                         <legend>@lang('app.location_info')</legend>
 
                         <div class="form-group  {{ $errors->has('country')? 'has-error':'' }}">
-                            <label for="category_name" class="col-sm-4 control-label">@lang('app.country')</label>
                             <div class="col-sm-8">
                                 <select class="form-control select2" name="country">
                                     <option value="">@lang('app.select_a_country')</option>
@@ -205,26 +196,11 @@
                                 </select>
                                 {!! $errors->has('country')? '<p class="help-block">'.$errors->first('country').'</p>':'' !!}
                             </div>
+                            <label for="category_name" class="col-sm-4 control-label">@lang('app.country')</label>
                         </div>
 
-                        <div class="form-group  {{ $errors->has('state')? 'has-error':'' }}">
-                            <label for="category_name" class="col-sm-4 control-label">@lang('app.state')</label>
-                            <div class="col-sm-8">
-                                <select class="form-control select2" id="state_select" name="state">
-                                    @if($previous_states->count() > 0)
-                                        @foreach($previous_states as $state)
-                                            <option value="{{ $state->id }}" {{ old('state') == $state->id ? 'selected' :'' }}>{{ $state->state_name }}</option>
-                                        @endforeach
-                                    @endif
-                                </select>
-                                <p class="text-info">
-                                    <span id="state_loader" style="display: none;"><i class="fa fa-spin fa-spinner"></i> </span>
-                                </p>
-                            </div>
-                        </div>
 
                         <div class="form-group  {{ $errors->has('city')? 'has-error':'' }}">
-                            <label for="category_name" class="col-sm-4 control-label">@lang('app.city')</label>
                             <div class="col-sm-8">
                                 <select class="form-control select2" id="city_select" name="city">
                                     @if($previous_cities->count() > 0)
@@ -237,47 +213,48 @@
                                     <span id="city_loader" style="display: none;"><i class="fa fa-spin fa-spinner"></i> </span>
                                 </p>
                             </div>
+                            <label for="category_name" class="col-sm-4 control-label">@lang('app.city')</label>
                         </div>
 
 
                         <legend>@lang('app.seller_info')</legend>
 
                         <div class="form-group {{ $errors->has('seller_name')? 'has-error':'' }}">
-                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.seller_name')</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="seller_name" value="{{ old('seller_name')? old('seller_name') : $lUser->name }}" name="seller_name" placeholder="@lang('app.seller_name')">
                                 {!! $errors->has('seller_name')? '<p class="help-block">'.$errors->first('seller_name').'</p>':'' !!}
                             </div>
+                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.seller_name')</label>
                         </div>
 
                         <div class="form-group {{ $errors->has('seller_email')? 'has-error':'' }}">
-                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.seller_email')</label>
                             <div class="col-sm-8">
                                 <input type="email" class="form-control" id="seller_email" value="{{ old('seller_email')? old('seller_email') : $lUser->email }}" name="seller_email" placeholder="@lang('app.seller_email')">
                                 {!! $errors->has('seller_email')? '<p class="help-block">'.$errors->first('seller_email').'</p>':'' !!}
                             </div>
+                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.seller_email')</label>
                         </div>
 
 
                         <div class="form-group {{ $errors->has('seller_phone')? 'has-error':'' }}">
-                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.seller_phone')</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="seller_phone" value="{{ old('seller_phone') ? old('seller_phone') : $lUser->phone }}" name="seller_phone" placeholder="@lang('app.seller_phone')">
                                 {!! $errors->has('seller_phone')? '<p class="help-block">'.$errors->first('seller_phone').'</p>':'' !!}
                             </div>
+                            <label for="ad_title" class="col-sm-4 control-label">@lang('app.seller_phone')</label>
                         </div>
 
                         <div class="form-group {{ $errors->has('address')? 'has-error':'' }}">
-                            <label for="address" class="col-sm-4 control-label">@lang('app.address')</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="address" value="{{ old('address')? old('address') : $lUser->address }}" name="address" placeholder="@lang('app.address')">
                                 {!! $errors->has('address')? '<p class="help-block">'.$errors->first('address').'</p>':'' !!}
                                 <p class="text-info">@lang('app.address_line_help_text')</p>
                             </div>
+                            <label for="address" class="col-sm-4 control-label">@lang('app.address')</label>
                         </div>
 
 
-
+<!--
                         @if(get_option('ads_price_plan') != 'all_ads_free')
 
 
@@ -339,7 +316,7 @@
 
                         @endif
 
-
+-->
 
                         <div class="form-group">
                             <div class="col-sm-offset-4 col-sm-8">

@@ -26,7 +26,6 @@
                         <form action="" class="form-horizontal" method="post"> @csrf
 
                         <div class="form-group">
-                            <label for="category_name" class="col-sm-4 control-label">@lang('app.select_a_category')</label>
 
                             <div class="col-sm-8">
 
@@ -44,14 +43,15 @@
                                 </select>
 
                             </div>
+                            <label for="category_name" class="col-sm-4 control-label">@lang('app.select_a_category')</label>
                         </div>
 
                         <div class="form-group {{ $errors->has('brand_name')? 'has-error':'' }}">
-                            <label for="brand_name" class="col-sm-4 control-label">@lang('app.brand_name')</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="brand_name" value="{{ old('brand_name') }}" name="brand_name" placeholder="@lang('app.brand_name')">
                                 {!! $errors->has('brand_name')? '<p class="help-block">'.$errors->first('brand_name').'</p>':'' !!}
                             </div>
+                            <label for="brand_name" class="col-sm-4 control-label">@lang('app.brand_name')</label>
                         </div>
 
                         <div class="form-group">

@@ -1,4 +1,6 @@
 <!doctype html>
+<html  dir="rtl" lang="ar">
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -57,6 +59,11 @@
     @endif
 
     <script src="{{ asset('assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
+    <style type="text/css">
+    th{
+        text-align: right;
+    }
+</style>
 </head>
 <body>
 <!--[if lt IE 8]>

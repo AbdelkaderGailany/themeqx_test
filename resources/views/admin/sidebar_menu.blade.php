@@ -28,10 +28,7 @@
                 </ul>
             </li>
 
-            <li>
-                <a href="#"><i class="fa fa-rss-square"></i> @lang('app.blog')<span class="fa arrow"></span></a>
-                
-            </li>
+            
             <li> <a href="{{ route('ad_reports') }}"><i class="fa fa-exclamation"></i> @lang('app.ad_reports')</a>  </li>
             <li> <a href="{{ route('users') }}"><i class="fa fa-users"></i> @lang('app.users')</a>  </li>
                     

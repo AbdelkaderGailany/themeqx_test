@@ -27,7 +27,6 @@
                         <form action="" class="form-horizontal" method="post"> @csrf
 
                         <div class="form-group">
-                            <label for="category_name" class="col-sm-4 control-label">@lang('app.select_a_category')</label>
 
                             <div class="col-sm-8">
                                 <select class="form-control select2" name="parent_category">
@@ -37,21 +36,21 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <label for="category_name" class="col-sm-4 control-label">@lang('app.select_a_category')</label>
                         </div>
 
                         <div class="form-group {{ $errors->has('category_name')? 'has-error':'' }}">
-                            <label for="category_name" class="col-sm-4 control-label">@lang('app.category_name')</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="category_name" value="{{ old('category_name') }}" name="category_name" placeholder="@lang('app.category_name')">
                                 {!! $errors->has('category_name')? '<p class="help-block">'.$errors->first('category_name').'</p>':'' !!}
 
                             </div>
+                            <label for="category_name" class="col-sm-4 control-label">@lang('app.category_name')</label>
                         </div>
 
 
 
                         <div class="form-group">
-                            <label for="fa_icon" class="col-sm-4 control-label">@lang('app.select_icon')</label>
                             <div class="col-sm-8">
                                 <select class="form-control select2icon" name="fa_icon">
                                     <option value="0">@lang('app.select_icon')</option>
@@ -60,10 +59,10 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <label for="fa_icon" class="col-sm-4 control-label">@lang('app.select_icon')</label>
                         </div>
 
                         <div class="form-group">
-                            <label for="`color_class" class="col-sm-4 control-label">@lang('app.select_color')</label>
                             <div class="col-sm-8">
                                 <select class="form-control select2" name="color_class">
                                     @foreach(category_classes() as $class)
@@ -71,15 +70,16 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <label for="`color_class" class="col-sm-4 control-label">@lang('app.select_color')</label>
                         </div>
 
                         <div class="form-group {{ $errors->has('description')? 'has-error':'' }}">
-                            <label for="description" class="col-sm-4 control-label">@lang('app.description')</label>
                             <div class="col-sm-8">
                                 <textarea name="description" id="description" class="form-control" rows="6">{{ old('description') }}</textarea>
                                 {!! $errors->has('description')? '<p class="help-block">'.$errors->first('description').'</p>':'' !!}
 
                             </div>
+                            <label for="description" class="col-sm-4 control-label">@lang('app.description')</label>
                         </div>
 
                         <div class="form-group">

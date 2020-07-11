@@ -2,16 +2,16 @@
 
 @section('main')
 
-    <div class="container">
+    <div class="container ">
 
-    <div id="wrapper">
+    <div  id="wrapper">
 
         @include('admin.sidebar_menu')
 
         <div id="page-wrapper">
 
             @if(session('error'))
-                <div class="row">
+                <div class="row pull-left">
                     <div class="col-lg-12">
                         <br />
                         <div class="alert alert-danger">
@@ -21,7 +21,7 @@
                 </div>
             @endif
 
-            <div class="row">
+            <div class="row ">
                 <div class="col-lg-12">
                     <h1 class="page-header">@lang('app.dashboard')</h1>
                 </div>
