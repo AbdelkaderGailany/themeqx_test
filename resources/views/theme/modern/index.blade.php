@@ -12,8 +12,7 @@
 
                 <div class="col-md-12">
 
-                    <h1>{!! get_option('modern_home_headline1') !!}</h1>
-                    <h3>{!! get_option('modern_home_headline2') !!}</h3>
+                   
 
                     <div class="modern-home-search-bar-wrap">
                         <div class="search-wrapper">
@@ -48,7 +47,7 @@
                                         </select>
                                     </div>
                                 @endif
-                                <button type="submit" class="btn theme-btn"> <i class="fa fa-search"></i> Search Ads</button>
+                                <button type="submit" class="btn theme-btn"> <i class="fa fa-search"></i> بحث</button>
                             </form>
                         </div>
 
