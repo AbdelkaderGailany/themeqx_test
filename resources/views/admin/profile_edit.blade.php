@@ -43,7 +43,7 @@
                         <div class="form-group {{ $errors->has('gender')? 'has-error':'' }}">
                             <div class="col-sm-8">
                                 <select id="gender" name="gender" class="form-control select2">
-                                    <option value="">Select Gender</option>
+                                    <option value="">اختر الجنس</option>
                                     <option value="ذكر" {{ $user->gender == 'ذكر'?'selected':'' }}>ذكر</option>
                                     <option value="انثى" {{ $user->gender == 'انثى'?'selected':'' }}>انثى</option>
                                    
