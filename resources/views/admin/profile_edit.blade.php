@@ -44,8 +44,8 @@
                             <div class="col-sm-8">
                                 <select id="gender" name="gender" class="form-control select2">
                                     <option value="">Select Gender</option>
-                                    <option value="ذكر" {{ $user->gender == 'ذكر'?'selected':'' }}>Male</option>
-                                    <option value="انثى" {{ $user->gender == 'انثى'?'selected':'' }}>Fe-Male</option>
+                                    <option value="ذكر" {{ $user->gender == 'ذكر'?'selected':'' }}>ذكر</option>
+                                    <option value="انثى" {{ $user->gender == 'انثى'?'selected':'' }}>انثى</option>
                                    
                                 </select>
 
