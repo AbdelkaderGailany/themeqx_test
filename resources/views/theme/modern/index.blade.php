@@ -113,9 +113,7 @@
                                         <link itemprop="availability" href="http://schema.org/InStock" />
                                     </div>
 
-                                    @if($ad->price_plan == 'premium')
-                                        <div class="ribbon-wrapper-green"><div class="ribbon-green">{{ ucfirst($ad->price_plan) }}</div></div>
-                                    @endif
+                                   
                                     
                                 </div>
                             </div>
@@ -169,12 +167,7 @@
                                         <link itemprop="availability" href="http://schema.org/InStock" />
                                     </div>
 
-                                    @if($ad->price_plan == 'premium')
-                                        <div class="ribbon-wrapper-green"><div class="ribbon-green">{{ ucfirst($ad->price_plan) }}</div></div>
-                                    @endif
-                                    @if($ad->mark_ad_urgent == '1')
-                                        <div class="ribbon-wrapper-red"><div class="ribbon-red">@lang('app.urgent')</div></div>
-                                    @endif
+                                    
 
 
                                 </div>
