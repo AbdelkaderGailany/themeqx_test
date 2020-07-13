@@ -421,7 +421,7 @@
                         loop:false
                     }
                 },
-                navText : ['<i class="fa fa-arrow-circle-o-left"></i>','<i class="fa fa-arrow-circle-o-right"></i>']
+                navText : ['<i class="fa fa-arrow-circle-o-right"></i>','<i class="fa fa-arrow-circle-o-left"></i>']
             });
         });
     </script>
