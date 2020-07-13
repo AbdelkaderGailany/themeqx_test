@@ -248,12 +248,7 @@
                                         <link itemprop="availability" href="http://schema.org/InStock" />
                                     </div>
 
-                                    @if($rad->price_plan == 'premium')
-                                        <div class="ribbon-wrapper-green"><div class="ribbon-green">{{ ucfirst($rad->price_plan) }}</div></div>
-                                    @endif
-                                    @if($rad->mark_ad_urgent == '1')
-                                        <div class="ribbon-wrapper-red"><div class="ribbon-red">@lang('app.urgent')</div></div>
-                                    @endif
+                                   
 
 
                                 </div>
