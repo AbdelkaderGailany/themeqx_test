@@ -44,9 +44,9 @@
                             <div class="col-sm-8">
                                 <select id="gender" name="gender" class="form-control select2">
                                     <option value="">Select Gender</option>
-                                    <option value="male" {{ $user->gender == 'male'?'selected':'' }}>Male</option>
-                                    <option value="female" {{ $user->gender == 'female'?'selected':'' }}>Fe-Male</option>
-                                    <option value="third_gender" {{ $user->gender == 'third_gender'?'selected':'' }}>Third Gender</option>
+                                    <option value="ذكر" {{ $user->gender == 'ذكر'?'selected':'' }}>Male</option>
+                                    <option value="انثى" {{ $user->gender == 'انثى'?'selected':'' }}>Fe-Male</option>
+                                   
                                 </select>
 
                                 {!! $errors->has('gender')? '<p class="help-block">'.$errors->first('gender').'</p>':'' !!}
