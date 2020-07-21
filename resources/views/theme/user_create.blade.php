@@ -126,11 +126,11 @@
                         <div class="row  {{ $errors->has('password')? 'has-error':'' }}">
                             <div class="col-xs-4 col-sm-3 col-md-3">
 					<span class="button-checkbox">
-						<label><input type="checkbox" name="agree" value="1" /> I Agree </label>
+						<label><input type="checkbox" name="agree" value="1" /> أوافق </label>
 					</span>
                             </div>
                             <div class="col-xs-8 col-sm-9 col-md-9">
-                                By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="{{ route('single_page', 'terms-and-condition') }}" target="_blank">Terms and Conditions</a> set out by this site, including our Cookie Use.
+                                 اوافق على شروط و احكام الموقع
                             </div>
 
                             <div class="col-sm-12">
