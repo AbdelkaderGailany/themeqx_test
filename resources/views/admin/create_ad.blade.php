@@ -118,13 +118,13 @@
 
 
                         <div class="form-group  {{ $errors->has('price')? 'has-error':'' }}">
-                            <label for="price" class="col-md-4 control-label">@lang('app.price')</label>
                             <div class="col-md-4">
                                 <div class="input-group">
-                                    <span class="input-group-addon">{{ get_option('currency_sign') }}</span>
+                                    <span class="input-group-addon">$</span>
                                     <input type="text" placeholder="@lang('app.ex_price')" class="form-control" name="price" id="price" value="{{ old('price') }}">
                                 </div>
                             </div>
+                            <label for="price" class="col-md-4 control-label">@lang('app.price')</label>
                             
 
                             <div class="col-sm-8 col-md-offset-4">

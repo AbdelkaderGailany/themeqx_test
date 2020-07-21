@@ -75,9 +75,8 @@
                     <div class="row row-sm-offset-3">
                         <div class="col-xs-12">
                             <div class="col-xs-12 col-sm-6">
-                                    <input type="checkbox" value="remember-me">تذكرني
-                                <label class="checkbox">
-                                </label>
+                                    <input type="checkbox" value="remember-me" style="    margin: 12px 0 0;">تذكرني
+                                
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <p class="forgotPassword">
